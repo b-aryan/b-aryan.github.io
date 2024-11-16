@@ -9,6 +9,10 @@ body {
     background-color: burlywood;
     font-family: 'Iosevka', monospace;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-stretch: condensed;
+    letter-spacing: -0.03em; /* Slightly reduce space between characters */
 }
 
 .container {
