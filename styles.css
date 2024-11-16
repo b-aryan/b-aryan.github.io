@@ -19,7 +19,7 @@ body {
 .left-column {
     position: sticky;
     top: 0;
-    width: 30%;
+    width: 40%;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
@@ -32,7 +32,7 @@ body {
 }
 
 .right-column {
-    width: 70%;
+    width: 60%;
     padding: 20px;
     box-sizing: border-box;
 }
