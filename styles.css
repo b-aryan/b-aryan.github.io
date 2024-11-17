@@ -187,13 +187,27 @@ p {
 }
 
 .contact-links li {
+    display: flex;
+    align-items: baseline;
     margin: 0.5rem 0;
     font-size: 1.1rem;
 }
 
 .contact-links strong {
-    display: inline-block;
-    min-width: 80px;
+    display: flex;
+    align-items: baseline;
+    min-width: 100px; /* Adjust this value to ensure all colons align */
+}
+
+.bullet {
+    margin-right: 4px;
+}
+
+.contact-link {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    margin-left: 5px; /* Add a small space after the colon */
 }
 
 .contact-value {
