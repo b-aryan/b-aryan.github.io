@@ -157,13 +157,13 @@ p {
 
 .ipa {
     position: absolute;
-    bottom: 75%;
+    bottom: 70%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.85em;
+    font-size: 0.75em;
     color: #666;
     font-style: italic;
-    font-family: 'Times New Roman', serif;
+    /* font-family: 'Times New Roman', serif; */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease;
