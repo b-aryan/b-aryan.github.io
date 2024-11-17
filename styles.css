@@ -92,7 +92,7 @@ p {
     list-style: none;
     padding: 0;
     margin-top: 0.5rem;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 .nav-links li {
@@ -161,4 +161,47 @@ p {
 .name-container:hover .ipa {
     opacity: 1;
     visibility: visible;
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.contact-links li {
+    margin: 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-links strong {
+    display: inline-block;
+    min-width: 80px;
+}
+
+.contact-value {
+    font-family: 'Iosevka', monospace;
+}
+
+.contact-link {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+
+.contact-link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    border-bottom: 1px dotted #333;
+}
+
+.contact-link:hover {
+    color: #007bff;
+}
+
+.contact-link:hover:after {
+    border-bottom-color: #007bff;
 }
