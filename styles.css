@@ -97,7 +97,7 @@ body {
 
 h2 {
     font-size: 1.8em;
-    margin-top: 0px;
+    margin: 5px;
 }
 
 p {
@@ -188,11 +188,11 @@ p {
 .contact-links {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .contact-links li {
-    margin: 0.75rem 0;
+    margin: 0.5rem 0;
     font-size: 1.1rem;
 }
 
