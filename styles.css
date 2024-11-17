@@ -91,7 +91,7 @@ p {
 .nav-links {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-left: 1.5rem;  /* This shifts the links to the right */
 }
 
@@ -101,16 +101,15 @@ p {
 
 .nav-links a {
     color: #333;
-    text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.2s ease;
-    border-bottom: 1px dotted #333;  /* Adds dotted underline */
-    padding-bottom: 2px;  /* Adds some space between text and underline */
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;  /* Adjusts underline position */
+    text-decoration-thickness: 1px; /* Adds some space between text and underline */
 }
 
 .nav-links a:hover {
     color: #007bff;
-    border-bottom-color: #007bff;  /* Changes underline color on hover */
 }
 
 .name-container {
