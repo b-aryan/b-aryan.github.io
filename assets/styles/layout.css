@@ -21,4 +21,11 @@
     padding-bottom: 1rem;
     box-sizing: border-box;
     background-color: var(--bg-primary);
+    opacity: 1;
+    backdrop-filter: none;         /* Prevents backdrop filtering effects */
+    -webkit-backdrop-filter: none; /* For Safari support */
+    background-blend-mode: normal; /* Ensures normal background blending */
+    isolation: isolate;           /* Creates a new stacking context */
 }
+
+
