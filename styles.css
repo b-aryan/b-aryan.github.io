@@ -13,11 +13,14 @@ body {
     -moz-osx-font-smoothing: grayscale; */
     font-stretch: ultra-condensed;
     letter-spacing: -0.03em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
-    min-height: 100vh;
+    flex: 1;
 }
 
 .left-column {
@@ -73,21 +76,6 @@ p {
     text-align: justify;
 }
 
-/* Add responsive design for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .left-column, .right-column {
-        width: 100%;
-    }
-    
-    .left-column {
-        height: 50vh;
-    }
-}
-
 .nav-links {
     list-style: none;
     padding: 0;
@@ -107,15 +95,15 @@ p {
 }
 
 .nav-links .link-text {
-    position: relative;  /* Add position relative */
+    position: relative;
 }
 
-.nav-links .link-text:after {  /* Use pseudo-element for underline */
+.nav-links .link-text:after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 1px;  /* Adjust this value to move the line up/down */
+    bottom: 1px;
     border-bottom: 1px dotted #333;
 }
 
@@ -133,12 +121,12 @@ p {
     cursor: pointer;
 }
 
-.name-container:after {  /* Pseudo-element for underline */
+.name-container:after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 5px;  /* Adjust this value to move the line up/down */
+    bottom: 5px;
     border-bottom: 1px dotted #333;
 }
 
@@ -208,10 +196,10 @@ p {
 
 /* Footer styles */
 .footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    width: 100%;
+    padding: 2rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: auto;
 }
 
 .copyright {
@@ -220,22 +208,17 @@ p {
     text-align: center;
 }
 
-/* Update right-column to ensure footer stays at bottom */
-.right-column {
-    width: 60%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Ensure main content can grow but footer stays at bottom */
-.header, .section {
-    flex: 0 0 auto;
-}
-
-.footer {
-    flex-shrink: 0;
-    margin-top: auto;
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-column, .right-column {
+        width: 100%;
+    }
+    
+    .left-column {
+        height: 50vh;
+    }
 }
