@@ -60,7 +60,7 @@ body {
 .subtitle {
     font-size: 1.2em;
     margin: 10px 0;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 h2 {
@@ -92,10 +92,11 @@ p {
     list-style: none;
     padding: 0;
     margin-top: 1rem;
+    margin-left: 1.5rem;  /* This shifts the links to the right */
 }
 
 .nav-links li {
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;  /* Reduced from 0.5rem to 0.25rem for less vertical spacing */
 }
 
 .nav-links a {
@@ -103,8 +104,11 @@ p {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.2s ease;
+    border-bottom: 1px dotted #333;  /* Adds dotted underline */
+    padding-bottom: 2px;  /* Adds some space between text and underline */
 }
 
 .nav-links a:hover {
     color: #007bff;
+    border-bottom-color: #007bff;  /* Changes underline color on hover */
 }
