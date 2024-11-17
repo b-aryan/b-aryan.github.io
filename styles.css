@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
     position: relative;
 }
 
@@ -64,7 +64,7 @@ body {
 .right-column {
     width: 60%;
     padding: 20px;
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
     box-sizing: border-box;
     background-color: burlywood;
 }
@@ -274,6 +274,6 @@ p {
     }
 
     .right-column {
-        padding-bottom: 6rem;
+        padding-bottom: 2rem;
     }
 }
