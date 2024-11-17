@@ -9,13 +9,13 @@ body {
     background-color: burlywood;
     font-family: 'Iosevka', monospace;
     line-height: 1.6;
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
     font-stretch: ultra-condensed;
     letter-spacing: -0.03em;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-bottom: 6rem; /* Add padding to account for footer height */
+    position: relative; /* For absolute footer positioning */
 }
 
 .container {
@@ -68,6 +68,7 @@ body {
 .right-column {
     width: 60%;
     padding: 20px;
+    padding-bottom: 6rem; /* Match body padding-bottom */
     box-sizing: border-box;
 }
 
@@ -224,8 +225,10 @@ p {
     width: 100%;
     padding: 5px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: auto;
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Ensure footer stays on top */}
 
 .copyright {
     font-size: 0.9rem;
@@ -245,5 +248,9 @@ p {
     
     .left-column {
         height: 50vh;
+    }
+    
+    .right-column {
+        padding-bottom: 6rem; /* Maintain footer space on mobile */
     }
 }
