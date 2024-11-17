@@ -48,7 +48,7 @@ body {
     top: 0;
     background-color: burlywood;
     padding: 20px 0;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .title {
@@ -204,4 +204,38 @@ p {
 
 .contact-link:hover:after {
     border-bottom-color: #007bff;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Update right-column to ensure footer stays at bottom */
+.right-column {
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ensure main content can grow but footer stays at bottom */
+.header, .section {
+    flex: 0 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    margin-top: auto;
 }
