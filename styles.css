@@ -113,9 +113,29 @@ p {
     border-bottom-color: #007bff;  /* Changes underline color on hover */
 }
 
+.name-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .ipa {
-    font-size: 0.9em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85em;
     color: #666;
     font-style: italic;
-    font-family: 'Times New Roman', serif;  /* Times New Roman has good IPA support */
+    font-family: 'Times New Roman', serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    white-space: nowrap;
+    padding-top: 4px;
+}
+
+.name-container:hover .ipa {
+    opacity: 1;
+    visibility: visible;
 }
