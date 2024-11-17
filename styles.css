@@ -70,6 +70,7 @@ body {
     padding: 20px;
     padding-bottom: 6rem; /* Match body padding-bottom */
     box-sizing: border-box;
+    background-color: burlywood;
 }
 
 .header {
@@ -175,6 +176,10 @@ p {
 .name-container:hover .ipa {
     opacity: 1;
     visibility: visible;
+}
+
+.contact.section{
+    background-color: burlywood;
 }
 
 .contact-links {
