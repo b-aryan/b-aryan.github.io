@@ -112,3 +112,10 @@ p {
     color: #007bff;
     border-bottom-color: #007bff;  /* Changes underline color on hover */
 }
+
+.ipa {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    font-family: 'Times New Roman', serif;  /* Times New Roman has good IPA support */
+}
