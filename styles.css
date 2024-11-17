@@ -117,11 +117,14 @@ p {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;  /* Adjusts underline position */
+    text-decoration-thickness: 1px;
 }
 
 .ipa {
     position: absolute;
-    top: 100%;
+    bottom: 75%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.85em;
