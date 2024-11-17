@@ -103,25 +103,43 @@ p {
     color: #333;
     font-size: 1.1rem;
     transition: color 0.2s ease;
-    text-decoration: none;  /* Remove default underline */
+    text-decoration: none;
 }
 
 .nav-links .link-text {
-    text-decoration: underline dotted;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
+    position: relative;  /* Add position relative */
+}
+
+.nav-links .link-text:after {  /* Use pseudo-element for underline */
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1px;  /* Adjust this value to move the line up/down */
+    border-bottom: 1px dotted #333;
 }
 
 .nav-links a:hover {
     color: #007bff;
 }
+
+.nav-links a:hover .link-text:after {
+    border-bottom-color: #007bff;
+}
+
 .name-container {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    text-decoration: underline dotted;
-    text-underline-offset: 2px;  /* Adjusts underline position */
-    text-decoration-thickness: 1px;
+}
+
+.name-container:after {  /* Pseudo-element for underline */
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;  /* Adjust this value to move the line up/down */
+    border-bottom: 1px dotted #333;
 }
 
 .ipa {
