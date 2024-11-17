@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+    /* Light mode colors (default) */
+    --bg-primary: burlywood;
+    --bg-secondary: #fff;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --link-hover: #007bff;
+    --button-bg: #333;
+    --button-hover: #444;
+    --button-text: white;
+    --border-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode colors */
+:root[data-theme="dark"] {
+    --bg-primary: #2d2416;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --link-hover: #5ba5ff;
+    --button-bg: #4a4a4a;
+    --button-hover: #5a5a5a;
+    --button-text: #e0e0e0;
+    --border-color: #666;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Theme toggle button styles */
+.corner-button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #e4e4e7;
+    position: relative;
+    cursor: pointer;
+    padding: 4px;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: transparent;
+}
+
+.corner-button::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    left: 4px;
+    transition: all 0.3s ease;
+    background-color: #fbbf24;
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+}
+
+.corner-button::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 4px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: radial-gradient(circle at center, 
+        #fbbf24 30%, 
+        rgba(251, 191, 36, 0.6) 60%,
+        transparent 70%
+    );
+    animation: glow 2s infinite alternate;
+}
+
+[data-theme="dark"] .corner-button {
+    background-color: #1f2937;
+}
+
+[data-theme="dark"] .corner-button::before {
+    transform: translateX(40px) rotate(311deg);
+    background: linear-gradient(274deg, #1f2937 60%, #ffecc7);
+    box-shadow: 
+        inset 11px 1px 6px 0px #fff5e0,
+        -2px -1px 10px rgba(255, 236, 199, 0.3),
+        0 0 20px rgba(255, 236, 199, 0.2);
+}
+
+[data-theme="dark"] .corner-button::after {
+    transform: translateX(40px) rotate(-45deg);
+    background: radial-gradient(circle at 75% 30%, 
+        rgba(255, 236, 199, 0.3) 0%,
+        rgba(255, 236, 199, 0.1) 40%,
+        transparent 60%
+    );
+    animation: moonGlow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #fbbf24,
+                    0 0 10px #fbbf24,
+                    0 0 15px rgba(251, 191, 36, 0.6);
+    }
+    to {
+        box-shadow: 0 0 10px #fbbf24,
+                    0 0 20px #fbbf24,
+                    0 0 30px rgba(251, 191, 36, 0.6);
+    }
+}
+
+@keyframes moonGlow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 236, 199, 0.3),
+                    0 0 10px rgba(255, 236, 199, 0.2);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(255, 236, 199, 0.4),
+                    0 0 30px rgba(255, 236, 199, 0.3);
+    }
+}

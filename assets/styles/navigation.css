@@ -1,0 +1,39 @@
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0px;
+}
+
+.nav-links li {
+    margin: 0.25rem 0;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-links .link-text {
+    position: relative;
+}
+
+.nav-links .link-text:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    border-bottom: 1px dotted var(--border-color);
+}
+
+.nav-links a:hover {
+    color: var(--link-hover);
+}
+
+.nav-links a:hover .link-text:after {
+    border-bottom-color: var(--link-hover);
+}

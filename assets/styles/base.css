@@ -1,0 +1,30 @@
+body {
+    margin-top: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: -0.03em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin: 5px;
+    color: var(--text-primary);
+}
+
+p {
+    margin: 15px 0;
+    text-align: justify;
+    color: var(--text-primary);
+}
