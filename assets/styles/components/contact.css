@@ -31,6 +31,7 @@
     text-decoration: none;
     position: relative;
     margin-left: 5px;
+    white-space: nowrap;
 }
 
 .contact-value {
