@@ -57,7 +57,7 @@
     height: 32px;
     border-radius: 50%;
     left: 4px;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), background 0.15s ease, box-shadow 0.15s ease;
     background-color: #fbbf24;
     box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
 }
