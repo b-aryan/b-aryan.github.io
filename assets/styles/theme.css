@@ -45,6 +45,7 @@
     color: transparent;
     outline: none; 
     -webkit-tap-highlight-color: transparent;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .corner-button::before {
@@ -54,7 +55,7 @@
     height: 32px;
     border-radius: 50%;
     left: 4px;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     background-color: #fbbf24;
     box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
 }
@@ -66,7 +67,7 @@
     height: 32px;
     left: 4px;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     background: radial-gradient(circle at center, 
         #fbbf24 30%, 
         rgba(251, 191, 36, 0.6) 60%,
@@ -77,15 +78,20 @@
 
 [data-theme="dark"] .corner-button {
     background-color: #1f2937;
+    background-image: 
+    radial-gradient(1px 1px at 20px 10px, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 10px 25px, rgba(255,255,255,0.8), rgba(255,255,255,0));
+
 }
 
 [data-theme="dark"] .corner-button::before {
-    transform: translateX(40px) rotate(311deg);
+    transform: translateX(40px) rotate(671deg);
     background: linear-gradient(274deg, #1f2937 60%, #ffecc7);
     box-shadow: 
         inset 11px 1px 6px 0px #fff5e0,
         -2px -1px 10px rgba(255, 236, 199, 0.3),
         0 0 20px rgba(255, 236, 199, 0.2);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="dark"] .corner-button::after {
